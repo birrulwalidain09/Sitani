@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layanan</title>
+  <link href="/app.css" rel="stylesheet">
+  <link href="/layanan.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-menu">
+        <img src="/image/sitani2.png" alt="Logo" class="h-10">
+        <a href="{{ route('home') }}" class="navbar-menu-item">Home</a>
+        <a href="{{ route('artikel') }}" class="navbar-menu-item">Artikel</a>
+        <a href="{{ route('layanan') }}" class="navbar-menu-item">Layanan</a>
+        <a href="{{ route('tentang-kami') }}" class="navbar-menu-item">Tentang Kami</a>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Cards Section -->
+    <div class="cards-container">
+      <!-- Card 1 -->
+      <a href="{{ route('harga-produk') }}" class="card-link">
+        <div class="card">
+          <img src="/image/1.png" alt="Service 1" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Data Harga Produk Pertanian</h3>
+            <p class="card-description"></p>
+          </div>
+        </div>
+      </a>
+      
+      <!-- Card 2 -->
+      <a href="service2.html" class="card-link">
+        <div class="card">
+          <img src="/image/2.jpg" alt="Service 2" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Data Produksi Pertanian</h3>
+            <p class="card-description"></p>
+          </div>
+        </div>
+      </a>
+      
+      <!-- Card 3 -->
+      <a href="service3.html" class="card-link">
+        <div class="card">
+          <img src="/image/3.jpg" alt="Service 3" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Data Cuaca dan Iklim</h3>
+            <p class="card-description"></p>
+          </div>
+        </div>
+      </a>
+      
+      <!-- Card 4 -->
+      <a href="service4.html" class="card-link">
+        <div class="card">
+          <img src="/image/edukasi.jpg" alt="Service 4" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Jadwal Penyuluhan Dinas Pertanian</h3>
+            <p class="card-description">.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo Section -->
+      <div class="footer-section footer-logo">
+        <img src="/image/sitani-footer.png" alt="Logo" class="footer-logo-image">
+      </div>
+      <!-- Menu Section -->
+      <div class="footer-section footer-menu">
+        <ul>
+          <li><a href="{{ route('home') }}">Home</a></li>
+          <li><a href="{{ route('artikel') }}">Artikel</a></li>
+          <li><a href="{{ route('layanan') }}">Layanan</a></li>
+          <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
+        </ul>
+      </div>
+      <!-- Contact Section -->
+      <div class="footer-section footer-contact">
+        <p>Contact Us:</p>
+        <p>Email: info@sitani.com</p>
+        <p>Phone: +62 123 4567</p>
+      </div>
+    </div>
+    <div class="footer-text">
+      &copy; 2024 Your Company. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>

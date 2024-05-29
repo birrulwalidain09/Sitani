@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 16px;
+}
+
+/* Cards Section */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 16px; /* Spacing between cards */
+  max-width: 1280px;
+  margin: auto;
+}
+
+.card {
+  background-color: #ffffff; /* Warna latar belakang card */
+  border-radius: 8px; /* Radius sudut card */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow pada semua sisi card */
+  overflow: hidden; /* Overflow hidden untuk memastikan shadow berfungsi */
+  transition: box-shadow 0.3s ease; /* Transisi efek shadow */
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Efek shadow yang lebih jelas saat hover */
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  font-size: 1.5rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.card-content p {
+  font-size: 0.875rem; /* text-sm */
+  color: #4a5568; /* text-gray-600 */
+}
+
+/* Footer Sections */
+.footer-section {
+  flex: 1;
+  margin: 8px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo-image {
+  max-width: 100px; /* Adjust logo size */
+  height: auto;
+}
+
+.footer-menu ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.footer-menu li {
+  margin-bottom: 8px;
+}
+
+.footer-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-menu a:hover {
+  color: #30bd09;
+}
+
+.footer-contact {
+  text-align: center;
+}
+
+.footer-contact p {
+  margin: 4px 0;
+}
+
+.footer-text {
+  text-align: center;
+  color: white;
+  margin-top: 16px;
+}

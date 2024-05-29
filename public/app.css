@@ -1,0 +1,343 @@
+/* Global Styles */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set minimum height of body to viewport height */
+}
+
+/* Navbar customization */
+.navbar {
+  background-color: #FFFFFF; 
+  padding: 16px; /* p-4 */
+}
+
+.navbar-container {
+  max-width: 1280px; /* container */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto; /* mx-auto */
+  display: flex; /* flex */
+  align-items: center; /* items-center */
+  justify-content: space-between; /* justify-between */
+}
+
+.navbar-menu {
+  display: flex; /* flex */
+  align-items: left; /* items-center */
+  gap: 10px; /* space-x-6 */
+  margin-left: 20px;
+}
+
+.navbar-menu-item {
+  color: rgb(0, 0, 0); /* text-white */
+  font-size: 15px; /* text-lg */
+  text-decoration: none;
+  margin-top: 14px;
+  margin-left: 20px;
+}
+
+.navbar-menu-item:hover {
+  color: #30bd09; /* hover:text-gray-300 */
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1; /* flex-grow */
+  max-width: 1280px; /* container */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto; /* mx-auto */
+  padding: 16px; /* p-4 */
+  position: relative; /* relative */
+}
+
+/* Background Square */
+.bg-gradient-to-r {
+  position: relative;
+  padding: 7rem; /* Mengatur padding untuk ukuran Background Square */
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 50px 50px 300px 50px; /* Menyesuaikan radius sudut */
+}
+
+.bg-gradient-to-r:before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to right, #2fd619, #c4e11a);
+  border-radius: 50px 50px 50px 300px;
+}
+
+.bg-gradient-to-r h2 {
+  font-size: 2rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.bg-gradient-to-r p {
+  font-size: 1rem; /* text-lg */
+  margin-top: 0; /* mt-0 */
+}
+
+.bg-gradient-to-r img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 200%;
+  max-height: 200%;
+}
+
+/* Teks di bawah Background Square */
+.text-center {
+  text-align: center;
+  max-width: 800px; /* Atur lebar maksimum sesuai kebutuhan */
+  margin: auto; /* Tengahkan teks */
+  padding: 0 20px; /* Beri padding kiri-kanan */
+}
+.text-center h3 {
+  font-size: 1.5rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+.text-center p {
+  font-size: 1.125rem; /* text-lg */
+  color: #4a5568; /* text-gray-600 */
+  line-height: 1.8; /* Sesuaikan line-height jika diperlukan */
+}
+
+/* Cards Section */
+.cards-container {
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Ensure equal spacing */
+  gap: 16px; /* Add spacing between cards */
+  margin-top: 20px;
+  padding: 0 16px; /* Add padding to the container */
+}
+
+.card {
+  background-color: #ffffff; /* Warna latar belakang card */
+  border-radius: 8px; /* Radius sudut card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow card */
+  overflow: hidden; /* Overflow hidden untuk memastikan shadow berfungsi */
+  padding: 16px; /* Add padding inside the card */
+  max-width: 300px; /* Set maximum width for the cards */
+  margin: auto; /* Center the cards */
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center text */
+  padding: 1rem;
+}
+
+.card-content h3 {
+  font-size: 1.25rem; /* Slightly smaller font size for the title */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.card-content p {
+  font-size: 0.875rem; /* text-sm */
+  color: #4a5568; /* text-gray-600 */
+}
+
+
+
+/* Ensure Background Square remains unchanged */
+.bg-gradient-to-r {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem; /* Tetapkan padding agar ukuran tetap */
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 50px 50px 300px 50px; /* Menyesuaikan radius sudut */
+}
+
+/* Footer customization */
+.footer {
+  background-color: #1b6414; /* Warna latar belakang footer */
+  padding: 16px; /* Spasi dalam footer */
+  color: white; /* Warna teks di footer */
+  margin-top: auto; /* Menempatkan footer di bawah konten lain */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+  justify-content: space-between; /* Distribute space between sections */
+  max-width: 1280px; /* container */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto; /* mx-auto */
+  padding: 16px; /* Spasi dalam footer */
+}
+
+.footer-section {
+  flex: 1;
+  margin: 8px; /* Margin around each section */
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center; /* Center the logo horizontally */
+  align-items: center; /* Center the logo vertically */
+}
+
+.footer-logo-image {
+  max-width: 100px; /* Adjust the size of the logo */
+  height: auto;
+}
+
+.footer-menu ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+  text-align: center; /* Center the menu items */
+}
+
+.footer-menu li {
+  margin-bottom: 8px; /* Space between menu items */
+}
+
+.footer-menu a {
+  color: white; /* Menu item color */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-menu a:hover {
+  color: #30bd09; /* Hover color */
+}
+
+.footer-contact {
+  text-align: center; /* Center the contact information */
+}
+
+.footer-contact p {
+  margin: 4px 0; /* Space between contact lines */
+}
+
+.footer-text {
+  text-align: center; /* text-center */
+  color: white; /* text-white */
+  margin-top: 16px; /* Margin above the footer text */
+}
+
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.navbar.dark-mode {
+  background-color: #333333;
+}
+
+.footer.dark-mode {
+  background-color: #333333;
+}
+
+/* Main content container */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px; /* Space between items */
+  padding: 16px; /* Padding around the container */
+}
+
+/* Individual content items */
+.content-item {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 60%; /* Increased width for larger size */
+  margin: 16px; /* Space around the items */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.content-item.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.content-image {
+  width: 50%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.content-text {
+  padding: 16px; /* Padding inside the text container */
+  width: 50%; /* Adjust the width as needed */
+}
+
+.content-text h3 {
+  font-size: 1.5rem; /* Increased font size for the item title */
+  margin-bottom: 8px; /* Space below the title */
+}
+
+.btn {
+  background-color: #2fd619; /* Button background color */
+  color: white; /* Button text color */
+  padding: 8px 16px; /* Button padding */
+  border-radius: 4px; /* Rounded corners for the button */
+  text-decoration: none; /* Remove underline from link */
+  margin-top: 8px; /* Space above the button */
+}
+

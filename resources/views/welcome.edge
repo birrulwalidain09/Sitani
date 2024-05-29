@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="/app.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-menu">
+        <img src="/image/sitani2.png" alt="Logo" class="h-10">
+        <a href="{{ route('home') }}" class="navbar-menu-item">Home</a>
+        <a href="{{ route('artikel') }}" class="navbar-menu-item">Artikel</a>
+        <a href="{{ route('layanan') }}" class="navbar-menu-item">Layanan</a>
+        <a href="{{ route('tentang-kami') }}" class="navbar-menu-item">Tentang Kami</a>
+        <a href="{{ route('login') }}" class="navbar-menu-item">Login</a>
+      </div>
+
+      <!-- Menu tambahan untuk admin -->
+      @if(auth.user && auth.user.role === 'admin')
+        <div class="navbar-menu">
+          <a href="{{ route('admin.editArtikel') }}" class="navbar-menu-item">Edit Artikel</a>
+          <a href="{{ route('admin.editProduk') }}" class="navbar-menu-item">Edit Produk</a>
+        </div>
+      @endif
+
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content relative">
+    <!-- Background Square -->
+    <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 rounded-br-50 rounded-tr-50 flex items-center justify-center">
+      <div class="p-8 text-white z-10">
+        <h2 class="text-3xl font-bold mb-4">Berpikir Luas, Bertani Cerdas</h2>
+        <p class="text-lg">Transformasi Digital untuk Pertanian, Temukan Kemudahan dengan SITANI</p>
+      </div>
+      <img src="/image/pertanian.png" alt="Gambar" class="h-32 absolute bottom-0 right-0 mr-8 mb-8">
+    </div>
+
+    <div class="text-center py-8">
+      <h3 class="text-xl font-semibold mb-2">Selamat datang di Web SITANI</h3>
+      <p class="text-lg">
+        Platform inovatif yang dirancang khusus untuk memberikan bantuan dan edukasi dalam dunia pertanian.
+        Kami hadir untuk memudahkan Anda dalam mempelajari, memahami, dan mengembangkan pengetahuan seputar pertanian,
+        serta menyediakan solusi yang sesuai untuk kebutuhan pertanian Anda. Mari bersama-sama menjelajahi berbagai
+        informasi berguna dan memperluas wawasan dalam dunia pertanian melalui Web SITANI!
+      </p>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards-container">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="/image/edukasi.jpg" alt="Card Image" class="card-image">
+        <div class="card-content p-4">
+          <h3 class="text-xl font-semibold mb-2">Aksesibilitas</h3>
+          <p class="text-sm text-gray-600">.</p>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="/image/komunitas.jpg" alt="Card Image" class="card-image">
+        <div class="card-content p-4">
+          <h3 class="text-xl font-semibold mb-2">Komunitas Kolaboratif</h3>
+          <p class="text-sm text-gray-600">.</p>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="/image/edukasi.jpg" alt="Card Image" class="card-image">
+        <div class="card-content p-4">
+          <h3 class="text-xl font-semibold mb-2">Edukasi dan Pelatihan</h3>
+          <p class="text-sm text-gray-600">.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-container">
+      <!-- Content 1 -->
+      <div class="content-item flex-row-reverse">
+        <img src="/image/akses.jpg" alt="Image 1" class="content-image">
+        <div class="content-text">
+          <h3>Temukan Berbagai Artikel Edukasi Menarik Seputar Pertanian</h3>
+          <a href="{{ route('artikel') }}" class="btn">Cek Disini</a>
+        </div>
+      </div>
+      
+      <!-- Content 2 -->
+      <div class="content-item">
+        <img src="/image/diskusi.jpg" alt="Image 2" class="content-image">
+        <div class="content-text">
+          <h3>Bergabung Dalam Komunitas Untuk Saling Berbagi Informasi dan Pengalaman</h3>
+          <a href="#" class="btn">Bergabung Sekarang</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section footer-logo">
+      <img src="/image/sitani-footer.png" alt="Logo" class="footer-logo-image">
+    </div>
+    <!-- Menu Section -->
+    <div class="footer-section footer-menu">
+      <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('artikel') }}">Artikel</a></li>
+        <li><a href="{{ route('layanan') }}">Layanan</a></li>
+        <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section footer-contact">
+      <p>Contact Us:</p>
+      <p>Email: info@sitani.com</p>
+      <p>Phone: +62 123 4567</p>
+    </div>
+  </div>
+  <div class="footer-text">
+    &copy; 2024 Your Company. All rights reserved.
+  </div>
+</footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>

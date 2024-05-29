@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami</title>
+  <link href="/app.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-menu">
+      <img src="/image/sitani2.png" alt="Logo" class="h-10">
+      <a href="{{ route('home') }}" class="navbar-menu-item">Home</a>
+      <a href="{{ route('artikel') }}" class="navbar-menu-item">Artikel</a>
+      <a href="{{ route('layanan') }}" class="navbar-menu-item">Layanan</a>
+      <a href="{{ route('tentang-kami') }}" class="navbar-menu-item">Tentang Kami</a>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
+</nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="text-center py-8">
+    <h3 class="text-xl font-semibold mb-2">SITANI - Website Pertanian Inovatif</h3>
+    <p class="text-lg">
+      Selamat datang di website SITANI Kami adalah tim yang berdedikasi untuk memberikan solusi inovatif dalam dunia pertanian. Dengan semangat yang kuat untuk memajukan sektor pertanian, kami bertekad untuk memberikan kontribusi nyata melalui platform ini.
+    </p>
+  </div>
+
+  <div class="text-center py-8">
+    <p class="text-lg">
+      Kami misi dan tujuan bersama: memperkuat komunitas pertanian dan meningkatkan kesejahteraan petani. Dengan Informasi dan pengetahuanyang dibutuhkan, kami berusaha untuk menyajikan informasi yang relevan, solusi praktis, dan teknologi terkini untuk membantu Anda mengoptimalkan hasil pertanian Anda.
+    </p>
+  </div>
+
+  <div class="text-center py-8">
+    <p class="text-lg">
+      Di Web SITANI, kami tidak hanya menyediakan data dan informasi, tetapi juga membangun komunitas yang saling mendukung. Kami percaya bahwa kolaborasi adalah kunci untuk mencapai kesuksesan dalam pertanian, dan itulah yang ingin kami dukung melalui platform ini.
+    </p>
+  </div>
+
+  <div class="text-center py-8">
+    <p class="text-lg">
+      Jangan ragu untuk menjelajahi website kami, bergabung dengan komunitas kami, dan menemukan berbagai sumber daya yang dapat membantu Anda mencapai tujuan pertanian Anda. Terima kasih telah bergabung dengan kami dalam perjalanan untuk menciptakan masa depan pertanian yang lebih baik.
+    </p>
+  </div>
+  
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section footer-logo">
+      <img src="/image/sitani-footer.png" alt="Logo" class="footer-logo-image">
+    </div>
+    <!-- Menu Section -->
+    <div class="footer-section footer-menu">
+      <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('artikel') }}">Artikel</a></li>
+        <li><a href="{{ route('layanan') }}">Layanan</a></li>
+        <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section footer-contact">
+      <p>Contact Us:</p>
+      <p>Email: info@sitani.com</p>
+      <p>Phone: +62 123 4567</p>
+    </div>
+  </div>
+  <div class="footer-text">
+    &copy; 2024 Your Company. All rights reserved.
+  </div>
+</footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
