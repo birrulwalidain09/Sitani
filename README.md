@@ -1,3 +1,10 @@
+# Sitani <br>
+Projek akhir Matakuliah Proyek Perangkat Lunak <br>
+1.Birrul Walidain <br>
+2.Merza Bana Ikrama
+
+
+
 # Adonis fullstack application
 
 This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
