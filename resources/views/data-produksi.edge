@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Produksi Pertanian</title>
+  <link href="/app.css" rel="stylesheet">
+  <link href="/harga.css" rel="stylesheet">
+  <link href="/produksi.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-menu">
+        <img src="/image/sitani2.png" alt="Logo" class="h-10">
+        <a href="{{ route('home') }}" class="navbar-menu-item">Home</a>
+        <a href="{{ route('artikel') }}" class="navbar-menu-item">Artikel</a>
+        <a href="{{ route('layanan') }}" class="navbar-menu-item">Layanan</a>
+        <a href="{{ route('tentang-kami') }}" class="navbar-menu-item">Tentang Kami</a>
+      </div>
+
+      <!-- Menu tambahan untuk admin -->
+      @if(auth.user && auth.user.role === 'admin')
+        <div class="navbar-menu">
+          <a href="{{ route('admin.editArtikel') }}" class="navbar-menu-item">Edit Artikel</a>
+          <a href="{{ route('admin.editProduk') }}" class="navbar-menu-item">Edit Produk</a>
+        </div>
+      @endif
+      
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+ <main class="main-content">
+    <table>
+      <caption>Produksi Tanaman Sayuran dan Buah-Buahan Semusim Menurut Jenis Tanaman di Kabupaten Aceh Besar (Kuintal)</caption>
+      <thead>
+        <tr>
+          <th rowspan="2">Jenis Sayuran dan Buah-Buahan</th>
+          <th colspan="3">Produksi</th>
+        </tr>
+        <tr>
+          <th>2020</th>
+          <th>2021</th>
+          <th>2022</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bawang Daun</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Bawang Merah</td>
+          <td>2314</td>
+          <td>3151</td>
+          <td>2522</td>
+        </tr>
+        <tr>
+          <td>Bawang Putih</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Bayam</td>
+          <td>11509</td>
+          <td>15899</td>
+          <td>12922</td>
+        </tr>
+        <tr>
+          <td>Buncis</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Cabai Rawit</td>
+          <td>54332</td>
+          <td>57091</td>
+          <td>45768</td>
+        </tr>
+        <tr>
+          <td>Kacang Panjang</td>
+          <td>27384</td>
+          <td>28791</td>
+          <td>24960</td>
+        </tr>
+        <tr>
+          <td>Kangkung</td>
+          <td>25485</td>
+          <td>28225</td>
+          <td>31674</td>
+        </tr>
+        <tr>
+          <td>Kembang Kol</td>
+          <td>80</td>
+          <td>60</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Kentang</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Ketimun</td>
+          <td>26480</td>
+          <td>23435</td>
+          <td>26572</td>
+        </tr>
+        <tr>
+          <td>Kubis</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Labu Siam</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Melon</td>
+          <td>999</td>
+          <td>935</td>
+          <td>1175</td>
+        </tr>
+        <tr>
+          <td>Paprika</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Petsai/Sawi</td>
+          <td>14662</td>
+          <td>18058</td>
+          <td>19168</td>
+        </tr>
+        <tr>
+          <td>Semangka</td>
+          <td>4960</td>
+          <td>2487</td>
+          <td>1519</td>
+        </tr>
+        <tr>
+          <td>Stroberi</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section footer-logo">
+      <img src="/image/sitani-footer.png" alt="Logo" class="footer-logo-image">
+    </div>
+    <!-- Menu Section -->
+    <div class="footer-section footer-menu">
+      <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('artikel') }}">Artikel</a></li>
+        <li><a href="{{ route('layanan') }}">Layanan</a></li>
+        <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section footer-contact">
+      <p>Contact Us:</p>
+      <p>Email: info@sitani.com</p>
+      <p>Phone: +62 123 4567</p>
+    </div>
+  </div>
+  <div class="footer-text">
+    &copy; 2024 Your Company. All rights reserved.
+  </div>
+</footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>

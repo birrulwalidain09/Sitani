@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Produksi Pertanian</title>
+  <link href="/app.css" rel="stylesheet">
+  <link href="/harga.css" rel="stylesheet">
+  <link href="/produksi.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-menu">
+        <img src="/image/sitani2.png" alt="Logo" class="h-10">
+        <a href="{{ route('home') }}" class="navbar-menu-item">Home</a>
+        <a href="{{ route('artikel') }}" class="navbar-menu-item">Artikel</a>
+        <a href="{{ route('layanan') }}" class="navbar-menu-item">Layanan</a>
+        <a href="{{ route('tentang-kami') }}" class="navbar-menu-item">Tentang Kami</a>
+      </div>
+
+      <!-- Menu tambahan untuk admin -->
+      @if(auth.user && auth.user.role === 'admin')
+        <div class="navbar-menu">
+          <a href="{{ route('admin.editArtikel') }}" class="navbar-menu-item">Edit Artikel</a>
+          <a href="{{ route('admin.editProduk') }}" class="navbar-menu-item">Edit Produk</a>
+        </div>
+      @endif
+      
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+ <main class="main-content">
+    </table>
+
+    <h2>Jadwal Penyuluhan Dinas Pertanian ke Petani di Aceh Besar</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Jadwal Penyuluhan</th>
+          <th>Waktu</th>
+          <th>Tempat</th>
+          <th>Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Senin, 10 Juni 2024</td>
+          <td>09:00 - 12:00 WIB</td>
+          <td>Desa Seulimeum, Kecamatan Lhoknga</td>
+          <td>Teknik Penanaman Cabai Rawit yang Efektif</td>
+        </tr>
+        <tr>
+          <td>Rabu, 12 Juni 2024</td>
+          <td>14:00 - 16:00 WIB</td>
+          <td>Desa Lambaro Skep, Kecamatan Kuta Cot Glie</td>
+          <td>Pengendalian Hama Penyakit pada Tanaman Padi</td>
+        </tr>
+        <tr>
+          <td>Jumat, 14 Juni 2024</td>
+          <td>10:00 - 13:00 WIB</td>
+          <td>Desa Gampong Jawa, Kecamatan Meuraxa</td>
+          <td>Pemupukan Tanaman Jagung yang Tepat</td>
+        </tr>
+        <tr>
+          <td>Senin, 17 Juni 2024</td>
+          <td>08:00 - 11:00 WIB</td>
+          <td>Desa Lamglumpang, Kecamatan Peukan Bada</td>
+          <td>Sosialisasi Asuransi Pertanian</td>
+        </tr>
+        <tr>
+          <td>Rabu, 19 Juni 2024</td>
+          <td>09:30 - 12:30 WIB</td>
+          <td>Desa Krueng Raya, Kecamatan Darul Ihsan</td>
+          <td>Peningkatan Kualitas Hasil Panen Buah-Buahan</td>
+        </tr>
+        </tbody>
+    </table>
+  </main>
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section footer-logo">
+      <img src="/image/sitani-footer.png" alt="Logo" class="footer-logo-image">
+    </div>
+    <!-- Menu Section -->
+    <div class="footer-section footer-menu">
+      <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('artikel') }}">Artikel</a></li>
+        <li><a href="{{ route('layanan') }}">Layanan</a></li>
+        <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section footer-contact">
+      <p>Contact Us:</p>
+      <p>Email: info@sitani.com</p>
+      <p>Phone: +62 123 4567</p>
+    </div>
+  </div>
+  <div class="footer-text">
+    &copy; 2024 Your Company. All rights reserved.
+  </div>
+</footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>
