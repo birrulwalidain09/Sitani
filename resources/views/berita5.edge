@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Produksi Pertanian</title>
+  <link href="/app.css" rel="stylesheet">
+  <link href="/berita.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-menu">
+        <img src="/image/sitani2.png" alt="Logo" class="h-10">
+        <a href="{{ route('home') }}" class="navbar-menu-item">Home</a>
+        <a href="{{ route('artikel') }}" class="navbar-menu-item">Artikel</a>
+        <a href="{{ route('layanan') }}" class="navbar-menu-item">Layanan</a>
+        <a href="{{ route('tentang-kami') }}" class="navbar-menu-item">Tentang Kami</a>
+      </div>
+
+      <!-- Menu tambahan untuk admin -->
+      @if(auth.user && auth.user.role === 'admin')
+        <div class="navbar-menu">
+          <a href="{{ route('admin.editArtikel') }}" class="navbar-menu-item">Edit Artikel</a>
+          <a href="{{ route('admin.editProduk') }}" class="navbar-menu-item">Edit Produk</a>
+        </div>
+      @endif
+      
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+ <main class="main-content">
+
+    <article class="artikel">
+      <img src="/image/berita6.jpg" alt="Gambar Artikel" class="artikel-gambar">
+      <h2 class="artikel-judul">AI Untuk Penyuluhan Pertanian,Mengapa Tidak?</h2>
+      <div class="artikel-isi">
+        <p>Kementerian Pertanian mendorong transformasi pertanian dari pola tradisional menjadi lebih modern guna mendongkrak produktivitas. </p>
+        <p>Transformasi pertanian itu sejalan dengan harapan Menteri Pertanian (Mentan) Syahrul Yasin Limpo yang berharap pertanian Indonesia bergerak ke arah yang maju, mandiri dan modern. </p>
+        <p>Salah satu upaya transformasi sektor pertanian itu diwujudkan oleh Badan Penyuluhan dan Pengembangan Sumber Daya Manusia Pertanian (BPPSDMP) Kementan melalui program yang disebut Sistem Kerja Latihan dan Kunjungan serta Supervisi. </p>
+        <p>Program yang disebut Sistem Kerja Lakususi itu merupakan pendekatan yang memadukan antara pelatihan bagi penyuluh dan ditindaklanjuti dengan kunjungan berupa pendampingan kepada petani atau kelompok tani (poktan) secara terjadwal dan didukung dengan supervisi teknis dari penyuluh senior. </p>
+        <p>Sistem Kerja Lakususi sudah dilakukan penyuluh pertanian selama puluhan tahun dan efektif mentransfer inovasi teknologi kepada user, petani dan praktisi pertanian. </p>
+        <p>Mentan Syahrul menyebut, di tahun 2022 inovasi dan teknologi menjadi kunci pembangunan pertanian di Indonesia. </p>
+        <p>Menurutnya, sistem dan alat pertanian modern berbasis teknologi akan menjadi salah satu penentu tercapainya target produksi pangan di masa mendatang. </p>
+        <p>“Pertanian tidak mungkin tanpa teknologi, tidak mungkin tanpa inovasi. Pertanian harus bisa beradaptasi agar mampu mencapai target yang ada. Ke depan, perubahan iklim juga menjadi tantangan dan kita tidak bisa menjawab tantangan ini tanpa teknologi," jelas Mentan Syahrul, sebagaimana dikutip dari Beritasatu.com, Rabu (13/4/2022). </p>
+        <p>Mentan Syahrul mengungkapkan, cara-cara baru seperti penggunaan mekanisasi pertanian, traktor tanpa awak, drone, robot tanam padi dan teknologi digital lain berbasis Artificial Intelligence (AI) dan Internet of Things (IoT) akan menjadi arah kebijakan pembangunan pertanian dan mendorong sektor ini agar mampu bersaing hingga memenangkan persaingan di kancah global. </p>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section footer-logo">
+      <img src="/image/sitani-footer.png" alt="Logo" class="footer-logo-image">
+    </div>
+    <!-- Menu Section -->
+    <div class="footer-section footer-menu">
+      <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('artikel') }}">Artikel</a></li>
+        <li><a href="{{ route('layanan') }}">Layanan</a></li>
+        <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section footer-contact">
+      <p>Contact Us:</p>
+      <p>Email: info@sitani.com</p>
+      <p>Phone: +62 123 4567</p>
+    </div>
+  </div>
+  <div class="footer-text">
+    &copy; 2024 Your Company. All rights reserved.
+  </div>
+</footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>

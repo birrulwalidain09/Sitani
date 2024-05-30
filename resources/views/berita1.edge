@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Produksi Pertanian</title>
+  <link href="/app.css" rel="stylesheet">
+  <link href="/berita.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-menu">
+        <img src="/image/sitani2.png" alt="Logo" class="h-10">
+        <a href="{{ route('home') }}" class="navbar-menu-item">Home</a>
+        <a href="{{ route('artikel') }}" class="navbar-menu-item">Artikel</a>
+        <a href="{{ route('layanan') }}" class="navbar-menu-item">Layanan</a>
+        <a href="{{ route('tentang-kami') }}" class="navbar-menu-item">Tentang Kami</a>
+      </div>
+
+      <!-- Menu tambahan untuk admin -->
+      @if(auth.user && auth.user.role === 'admin')
+        <div class="navbar-menu">
+          <a href="{{ route('admin.editArtikel') }}" class="navbar-menu-item">Edit Artikel</a>
+          <a href="{{ route('admin.editProduk') }}" class="navbar-menu-item">Edit Produk</a>
+        </div>
+      @endif
+      
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+ <main class="main-content">
+
+    <article class="artikel">
+      <img src="/image/berita1.png" alt="Gambar Artikel" class="artikel-gambar">
+      <h2 class="artikel-judul">Pestisida Nabati Dukung Pertanian Cerdas Iklim</h2>
+      <div class="artikel-isi">
+        <p>Pestisida nabati menjadi alternatif pengendalian hama yang aman dibanding pestisida sintetis. Penggunaan pestisida nabati memberikan keuntungan ganda, selain menghasilkan produk yang aman, lingkungan juga tidak tercemar. Pestisida nabati mampu mengatasi dan mengusir hama perusak tanaman pertanian dan perkebunan umumnya seperti kutu, ulat, belalang dan sebagainya.</p>
+        <p>Secara umum pestisida nabati diartikan sebagai suatu pestisida yang bahan dasarnya adalah tumbuhan. Pestisida nabati relatif mudah dibuat dengan bahan dan teknologi yang sederhana. Bahan bakunya yang alami atau nabati membuat pestisida ini mudah terurai (biodegradable) di alam sehingga tidak mencemari lingkungan.</p>
+        <p>Hal tersebut merupakan salah satu upaya yang tengah dilakukan Kementerian Pertanian untuk menggenjot produktivitas dalam menghadapi perubahan iklim menuju pertanian yang ramah lingkungan. Diantaranya melalui program Strategic Irrigation Modernization Urgent Project (SIMURP) dengan menggunakan teknologi Climate Smart Agriculture (CSA) atau Pertanian Cerdas Iklim.</p>
+        <p>Menteri Pertanian Syahrul Yasin Limpo (SYL) mengatakan, jika tujuan dari pembangunan pertanian diantaranya adalah peningkatan produktivitas, peningkatan kualitas, meningkatkan intensitas pertanaman, serta berbudidaya yang ramah lingkungan dengan tujuan akhir mensejahterakan masyarakat.</p>
+        <p>Selain itu perubahan iklim dan cuaca ekstrem akan berdampak tidak linier, tidak bisa diprediksi dan tidak berkelanjutan, ujar Mentan SYL.</p>
+        <p>Menurutnya, pandemi Covid-19 dan perubahan iklim berdampak sangat luar biasa terhadap perubahan lingkungan strategis global dan ketahanan pangan nasional.</p>
+        <p>Sementara Kepala Badan Penyuluhan dan Pengembangan SDM Pertanian (BPPSDMP), Dedi Nursyamsi, satu faktor produksi pertanian adalah pengendalian OPT. OPT bisa menghilangkan hasil antara 10 – 100% bahkan hingga tidak bisa panen atau gagal panen. Bila kita bisa mengendalikan OPT, artinya kita bisa menyelamatkan produktivitas antara 10 - 80%. Petani dan penyuluh sebagai garda terdepan suksesnya pembangunan pertanian harus terus bekerja keras.</p>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section footer-logo">
+      <img src="/image/sitani-footer.png" alt="Logo" class="footer-logo-image">
+    </div>
+    <!-- Menu Section -->
+    <div class="footer-section footer-menu">
+      <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('artikel') }}">Artikel</a></li>
+        <li><a href="{{ route('layanan') }}">Layanan</a></li>
+        <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section footer-contact">
+      <p>Contact Us:</p>
+      <p>Email: info@sitani.com</p>
+      <p>Phone: +62 123 4567</p>
+    </div>
+  </div>
+  <div class="footer-text">
+    &copy; 2024 Your Company. All rights reserved.
+  </div>
+</footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>

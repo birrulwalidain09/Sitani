@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Produksi Pertanian</title>
+  <link href="/app.css" rel="stylesheet">
+  <link href="/berita.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-menu">
+        <img src="/image/sitani2.png" alt="Logo" class="h-10">
+        <a href="{{ route('home') }}" class="navbar-menu-item">Home</a>
+        <a href="{{ route('artikel') }}" class="navbar-menu-item">Artikel</a>
+        <a href="{{ route('layanan') }}" class="navbar-menu-item">Layanan</a>
+        <a href="{{ route('tentang-kami') }}" class="navbar-menu-item">Tentang Kami</a>
+      </div>
+
+      <!-- Menu tambahan untuk admin -->
+      @if(auth.user && auth.user.role === 'admin')
+        <div class="navbar-menu">
+          <a href="{{ route('admin.editArtikel') }}" class="navbar-menu-item">Edit Artikel</a>
+          <a href="{{ route('admin.editProduk') }}" class="navbar-menu-item">Edit Produk</a>
+        </div>
+      @endif
+      
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+ <main class="main-content">
+
+    <article class="artikel">
+      <img src="/image/berita3.png" alt="Gambar Artikel" class="artikel-gambar">
+      <h2 class="artikel-judul">Pahami Susut Hasil Agar Menghindari Kerugian</h2>
+      <div class="artikel-isi">
+        <p>Pangan adalah hal esensial yang dibutuhkan oleh manusia. Tercukupinya kebutuhan pangan nasional perlu dicapai agar tidak terjadi kelaparan dan tercipta kemandirian pangan. Untuk mencukupi kebutuhan pangan khususnya makanan pokok, pemerintah terus menggalakkan peningkatan produksi. Di samping peningkatan produksi, salah satu cara untuk memenuhi kebutuhan pangan adalah manajemen terhadap susut hasil. </p>
+        <p>Manajemen terhadap susut hasil perlu dilakukan untuk mencegah susut hasil yang terlalu besar.  Menurut World Food Program (WTP), pada tahun 2010, sekitar 31% makanan yang diproduksi di dunia mengalami kehilangan atau menjadi sampah makanan. Jumlah tersebut setara dengan 1,3 miliar ton pangan. Di Indonesia sendiri, susut hasil padi kerap terjadi pada setiap rantai pasok terutama saat panen, pengeringan dan penggilingan. Menurut Badan Pusat Statistik (2007), susut total padi dapat mencapai 11,27%. Nilai tersebut terbagi menjadi 1,57% pada saat panen; 0,98% pada saat perontokan; 3,59% pada saat pengeringan; 3,07% pada saat penggilingan; 1,68% pada saat penyimpanan dan 0,39% pada saat pengangkutan. Oleh karena itu, pencegahan atau manajemen terhadap susut hasil perlu dilakukan di setiap tahapan. </p>
+        <p>Ketepatan waktu merupakan hal yang penting dalam panen. Pemanenan yang dilakukan terlalu awal dan terlalu akhir dapat menyebabkan kehilangan hasil. Jika padi dipanen terlalu awal, butiran padi masih belum masak, sehingga mengakibatkan bulir patah yang lebih banyak. Pemanenan padi yang terlambat dapat mengakibatkan tanaman terekspos hama seperti serangga, tikus dan burung. Keterlambatan panen satu minggu dapat meningkatkan susut panen dari 3,35% menjadi 8,65%. Waktu panen yang baik adalah ketika padi mencapai umur panennya. Umur panen padi sendiri berbeda pada setiap varietasnya. Umur panen dapat ditentukan dengan melihat kenampakan padi di hamparan sawah. Umur panen optimal padi dicapai setelah 90-95% butir gabah pada malai padi berwarna kuning atau kuning keemasan. </p>
+        <p>Selain waktu, metode pemanenan dan alat perontokan juga berpengaruh terhadap kehilangan hasil pada saat panen. Biasanya panen dilakukan secara berkelompok. Menurut Nugraha (2012), jumlah anggota kelompok panen mempengaruhi susut hasil panen. Semakin banyak anggota kelompok panen, semakin besar pula susut hasilnya. Dalam luasan 1 Ha, susut hasil mencapai 9,9% ketika dipanen oleh 50 orang dan menjadi 4,39% ketika dipanen oleh 20 orang.  Hal ini dapat terjadi karena sistem panen secara keroyokan membuat pekerja berebut mendapatkan hasil yang lebih banyak, sehingga terjadi banyak ceceran (susut saat panen) dan kehilangan hasil saat penumpukan (susut penumpukan sementara). </p>
+        <p>Perontokan padi dapat dilakukan dengan alat perontok dengan cara umpan pegang (hold-in) dan umpan langsung (through in). Perontokan padi dengan cara hold-in menggunakan pedal thresher atau power thresher untuk merontokan padi yang dipanen dengan cara potong bawah. Adapun perontokan padi dengan cara through in menggunakan power thresher untuk merontokan padi yang dipanen dengan cara potong atas atau potong tengah. </p>
+        <p>Menurut Nugraha (2012), perontokan dengan cara through in memberikan harapan besar dalam menekan susut panen dan susut penumpukan sementara. Hal itu disebabkan padi yang dipanen dengan cara potong tengah atau atas langsung dimasukkan ke dalam karung sehingga dapat menekan susut pada penumpukan sementara sebanyak 2% dan susut pengangkutan sebanyak 1%. Selain itu, panen dengan cara through in menggunakan mesin power thresher. Perontokan padi menggunakan mesin power thresher mampu menekan susut perontokan dari 3,31-4,35% (dengan alat gebot) menjadi 0,49-1,21%. </p>
+        <p>Selain metode perontokan, waktu perontokan juga berpengaruh terhadap kehilangan hasil. Penundaan perontokan dapat menyebabkan kehilangan hasil karena gabah yang rontok pada saat perontokan, susut hasil karena hama pada saat penumpukan dan adanya reaksi enzimatis yang menyebabkan gabah cepat berkecambah, bulir menjadi kuning, berjamur dan rusak. Selain pada saat sebelum proses perontokan, penundaan juga berpengaruh terhadap susut hasil gabah, susut hasil beras dan penurunan rendemen giling karena adanya kerusakan pada gabah. </p>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section footer-logo">
+      <img src="/image/sitani-footer.png" alt="Logo" class="footer-logo-image">
+    </div>
+    <!-- Menu Section -->
+    <div class="footer-section footer-menu">
+      <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('artikel') }}">Artikel</a></li>
+        <li><a href="{{ route('layanan') }}">Layanan</a></li>
+        <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section footer-contact">
+      <p>Contact Us:</p>
+      <p>Email: info@sitani.com</p>
+      <p>Phone: +62 123 4567</p>
+    </div>
+  </div>
+  <div class="footer-text">
+    &copy; 2024 Your Company. All rights reserved.
+  </div>
+</footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>

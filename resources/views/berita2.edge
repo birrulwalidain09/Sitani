@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Produksi Pertanian</title>
+  <link href="/app.css" rel="stylesheet">
+  <link href="/berita.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-menu">
+        <img src="/image/sitani2.png" alt="Logo" class="h-10">
+        <a href="{{ route('home') }}" class="navbar-menu-item">Home</a>
+        <a href="{{ route('artikel') }}" class="navbar-menu-item">Artikel</a>
+        <a href="{{ route('layanan') }}" class="navbar-menu-item">Layanan</a>
+        <a href="{{ route('tentang-kami') }}" class="navbar-menu-item">Tentang Kami</a>
+      </div>
+
+      <!-- Menu tambahan untuk admin -->
+      @if(auth.user && auth.user.role === 'admin')
+        <div class="navbar-menu">
+          <a href="{{ route('admin.editArtikel') }}" class="navbar-menu-item">Edit Artikel</a>
+          <a href="{{ route('admin.editProduk') }}" class="navbar-menu-item">Edit Produk</a>
+        </div>
+      @endif
+      
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+ <main class="main-content">
+
+    <article class="artikel">
+      <img src="/image/berita2.png" alt="Gambar Artikel" class="artikel-gambar">
+      <h2 class="artikel-judul">Kemampuan Adaptasi: Kunci Sukses Petani dan Kelompok tani</h2>
+      <div class="artikel-isi">
+        <p>Pertanian merupakan salah satu sektor utama dalam pembangunan ekonomi suatu negara. Di Desa Bener, Kecamatan Majenang, Kabupaten Cilacap, pertanian juga menjadi sumber pendapatan utama bagi masyarakat. Namun, untuk mencapai keberhasilan dalam ketahanan pangan, diperlukan pemberdayaan petani dan kelompok tani. Dalam artikel ini, kita akan membahas mengenai pentingnya pemberdayaan petani dan kelompok tani serta langkah-langkah yang dapat dilakukan oleh Pemerintah Desa Bener dan masyarakat untuk mencapai hal tersebut. </P>
+        <p>Sebelum membahas lebih lanjut mengenai pemberdayaan petani dan kelompok tani, penting untuk memahami situasi pertanian di Desa Bener. Desa Bener, yang terletak di Kecamatan Majenang, Kabupaten Cilacap, memiliki potensi pertanian yang besar. Namun, masih terdapat beberapa permasalahan yang menghambat perkembangan sektor pertanian. </P>
+        <p>Salah satu permasalahan yang dihadapi oleh petani dan kelompok tani di Desa Bener adalah keterbatasan akses terhadap informasi pertanian. Petani sering kali tidak mendapatkan informasi yang diperlukan mengenai teknik pertanian terbaru, pengendalian hama dan penyakit tanaman, serta peluang pasar yang ada. Hal ini mengakibatkan rendahnya produktivitas dan kualitas hasil pertanian yang dihasilkan. </P>
+        <p>Modal dan sarana pertanian juga merupakan kendala yang dihadapi oleh petani dan kelompok tani di Desa Bener. Banyak petani yang tidak memiliki modal yang cukup untuk membeli benih, pupuk, dan alat pertanian. Selain itu, kurangnya sarana pertanian seperti sistem irigasi yang baik juga mempengaruhi produktivitas pertanian di desa ini.    </P>
+        <p>Untuk mengatasi permasalahan yang dihadapi oleh petani dan kelompok tani di Desa Bener, pemerintah desa perlu melakukan pemberdayaan. Pemberdayaan petani dan kelompok tani bertujuan untuk meningkatkan pengetahuan, keterampilan, dan akses mereka terhadap informasi dan sumber daya yang diperlukan dalam praktik pertanian yang berkelanjutan. </P>
+        <p>Pemerintah Desa Bener perlu mengadakan pelatihan dan penyuluhan pertanian secara berkala untuk petani dan kelompok tani. Pelatihan ini dapat mencakup berbagai aspek pertanian seperti teknik budidaya tanaman, penggunaan pupuk organik, pengendalian hama dan penyakit, dan peluang pasar. Dengan pengetahuan dan keterampilan yang diperoleh melalui pelatihan ini, petani dan kelompok tani akan mampu meningkatkan produktivitas dan kualitas hasil pertanian mereka. </P>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section footer-logo">
+      <img src="/image/sitani-footer.png" alt="Logo" class="footer-logo-image">
+    </div>
+    <!-- Menu Section -->
+    <div class="footer-section footer-menu">
+      <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('artikel') }}">Artikel</a></li>
+        <li><a href="{{ route('layanan') }}">Layanan</a></li>
+        <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section footer-contact">
+      <p>Contact Us:</p>
+      <p>Email: info@sitani.com</p>
+      <p>Phone: +62 123 4567</p>
+    </div>
+  </div>
+  <div class="footer-text">
+    &copy; 2024 Your Company. All rights reserved.
+  </div>
+</footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Produksi Pertanian</title>
+  <link href="/app.css" rel="stylesheet">
+  <link href="/berita.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-menu">
+        <img src="/image/sitani2.png" alt="Logo" class="h-10">
+        <a href="{{ route('home') }}" class="navbar-menu-item">Home</a>
+        <a href="{{ route('artikel') }}" class="navbar-menu-item">Artikel</a>
+        <a href="{{ route('layanan') }}" class="navbar-menu-item">Layanan</a>
+        <a href="{{ route('tentang-kami') }}" class="navbar-menu-item">Tentang Kami</a>
+      </div>
+
+      <!-- Menu tambahan untuk admin -->
+      @if(auth.user && auth.user.role === 'admin')
+        <div class="navbar-menu">
+          <a href="{{ route('admin.editArtikel') }}" class="navbar-menu-item">Edit Artikel</a>
+          <a href="{{ route('admin.editProduk') }}" class="navbar-menu-item">Edit Produk</a>
+        </div>
+      @endif
+      
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+ <main class="main-content">
+
+    <article class="artikel">
+      <img src="/image/berita4.png" alt="Gambar Artikel" class="artikel-gambar">
+      <h2 class="artikel-judul">Pemeliharann Tanaman Cabai,Meningkatkat Produksi</h2>
+      <div class="artikel-isi">
+        <p>Menghasilkan tanaman cabai dengan produktivitas tinggi dan dalam kondisi sehat bukanlah hal yang mudah, perlu berbagai perawatan yang harus diperhatikan. Berbudiya tanaman cabai tidak terlepas juga dari musim baik itu musim penghujan maupun musim kemarau. Sudah ada konsekuensi masing-masing, bila berbudidaya tanaman cabai dimusim kemarau kendala yang sering dihadapi adalah serangan penyakit berupa virus dan hama sedangkan di musim penghujan seperti sekarang ini identik dengan serangan penyakit patogen berupa jamur. </p>
+        <p>Biasanya di musim penghujan harga cabai dipasaran mengalami kenaikan karena barang yang ada dipasaran minim tetapi permintaan pasar masih tetap sama bahkan permintaanya bisa tinggi. Ketika musim penghujan, cabai dipasaran stoknya berkurang sebab banyak yang mengalami kegagalan panen. Memang riskan ketika budidaya tanaman cabai dimusim penghujan, kebanyakan petani cabai mengalami gagal panen. Kegagalan ini biasa disebabkan oleh tingginya tingkat penyakit yang menyerang tanaman cabai seperti layu, busuk batang, dan antraknosa. </p>
+        <p>Maka dari itu, perawatan tanaman cabai dimusim penghujan harus ekstra hati-hati. Ada berbagai kiat-kiat perawatan seperti pemberian pupuk dan nutrisi yang tepat, pola tanam cabai, dan masih banyak lainnya, tujuannya adalah menjaga tanaman cabai dalam kondisi yang sehat dan menghasilkan tanaman dengan produktivitas yang tinggi. Kami disini akan membuatkan artikel terkait menjaga tanaman agar tetap dalam kondisi sehat dan produktivitas tanaman tinggi dengan cara memperhatikan perawatan dimulai dari nutrisi yang tepat dan pola tanam cabai. Kali ini, kita akan belajar bersama dengan salah satu petani bernama Mas Mustofa. Beliau bertempat tinggal di Desa Triharjo, Murangan, Kabupaten Sleman. Duduk berdiskusi bersamaan dibawah tanaman cabai milik beliau, hasilnya kami mendapatkan ilmu tentang perawatan cabai milik Mas Mustofa. </p>
+        <p>Dalam berbudidaya tanaman cabai bukan hanya melulu memperhatikan pemberian pupuk saja. Pola tanam merupakan salah satu faktor penting juga dalam berbudidaya tanaman cabai. Pola tanam ini terkait dengan pembuatan lubang tanam serta jarak tanam. Disini, tanaman cabai milik Mas Mustofa menerapkan pola tanam dengan sistem zig-zag atau selang-seling dalam dua lajur dan jarak tanam yang beliau pakai sekitar 70 cm. Jarak tanam yang cukup renggang, oleh sebab itu beliau menanam dalam satu lubang tanam diisi dua tanaman. Secara jumlah populasi akan terlihat sama dengan sistem tanam pada umumnya dengan jarak tanam 40 cm sampai 50 cm. Tetapi, dari segi kelembapan tetap beda, semakin renggang jarak tanamnya tingkat kelembapan rendah jika jarak tanamnya terlalu dekat membuat tanaman terlihat rimbun sehingga kelembapan meningkat. Bahaya dari tingkat kelembapan yang tinggi ini bisa membuat tempat tumbuhnya jamur. Jamur akan nyaman dan tumbuh dengan pesat sehingga berakibat tanaman mudah terserang penyakit. </p>
+        <p>Melihat kondisi tanaman cabai milik Mas Mustofa ini memang terlihat bersih terutama bagian bawah. Selama budidaya tanaman cabai, Mas Mustofa memang sering melakukan perempelan tunas anakan. Perempelan ini adalah pangkas atau potong tunas anakan bagian bawah dengan tujuan memaksimalkan pertumbuhan pada bagian atas atau batang utama. Unsur hara yang ada didalam tanah diserap oleh akar, kemudian disalurkan ke bagian buah atau bunga sehingga bila bagian bawah masih ada tunas anakan tentu nutrisi akan tersalur ke cabang bagian bawah terlebih dahulu. Secara kuantitas memang akan lebih banyak, tetapi secara kualitasnya belum tentu karena semakin banyak bakal buah tentu akan semakin banyak nutrisi yang dibutuhkan. Kasus yang kerap terjadi, kondisi buah kerdil dan kurang berbobot itu karena nutrisinya kurang terpenuhi. Sehingga cara perempelan ini termasuk cara alternatif dalam meningkatkan kualitas buahnya. Selain itu dengan dilakukan perempelan ini, sirkulasi udara disela-sela rongga tanaman akan lancar dan intensitas cahaya yang masuk akan lebih optimal diserap tanaman. Sinar matahari serta sirkulasi udara sangatlah diperlukan tanaman cabai, karena proses fotosintesis berlangsung lewat stomata. Sedangkan stomata itu terletak pada bagian bawah daun. Oleh karena itu, cahaya matahari serta sirkulasi udara yang lancar dapat diserap stomata kemudian diproses lalu diubah menjadi sumber makanan untuk tanaman.Dengan mengaplikasikan pola tanama zig-zag dengan jarak tanam 70 cm dan perempelan tunas anakan bagian bawah ini dirasakan banyak kelebihan pada tanaman cabai Mas Mustofa. “Tanaman cabai saya lebih kuat mas, terhindar dari penyakit, produktivitas tinggi, dan buah lebih berkualitas” Ujar Mas Mustofa. </p>
+        <p>Dalam memaksimalkan pertumbuhan serta produktivitas tanamannya, beliau kembali menambahkan nutrisi via spray. Menggunakan pupuk pelebat buah dengan kandungan kalium cair atau “KALINET” dengan dosis 5 tutup botol/16 liter air, intervalnya satu minggu sekali. Dosisnya memang terbilang banyak, tetapi menurut Mas Mustofa dengan dosis semakin banyak justru malah baik untuk tanaman. Selama menggunakan dosis 5 tutup botol, tanaman beliau masih aman tidak terlihat tanda-tanda overdosis. Kandungan “KALINET” atau pupuk pelebat buah ini tidak ada kandungan klor dan nitrogen sehingga lebih aman diaplikasikan ketika musim penghujan maupun musim kemarau. Kandungannya berfokus pada phospat, kalium, dan boron. Perpaduan tiga kandungan ini terlihat bagus pada tanaman Mas Mustofa, warna daun lebih hijau segar, kulit buah tebal, bobot serta kualitas buah tinggi. </p>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section footer-logo">
+      <img src="/image/sitani-footer.png" alt="Logo" class="footer-logo-image">
+    </div>
+    <!-- Menu Section -->
+    <div class="footer-section footer-menu">
+      <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('artikel') }}">Artikel</a></li>
+        <li><a href="{{ route('layanan') }}">Layanan</a></li>
+        <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section footer-contact">
+      <p>Contact Us:</p>
+      <p>Email: info@sitani.com</p>
+      <p>Phone: +62 123 4567</p>
+    </div>
+  </div>
+  <div class="footer-text">
+    &copy; 2024 Your Company. All rights reserved.
+  </div>
+</footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>

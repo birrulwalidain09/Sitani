@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Produksi Pertanian</title>
+  <link href="/app.css" rel="stylesheet">
+  <link href="/berita.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-menu">
+        <img src="/image/sitani2.png" alt="Logo" class="h-10">
+        <a href="{{ route('home') }}" class="navbar-menu-item">Home</a>
+        <a href="{{ route('artikel') }}" class="navbar-menu-item">Artikel</a>
+        <a href="{{ route('layanan') }}" class="navbar-menu-item">Layanan</a>
+        <a href="{{ route('tentang-kami') }}" class="navbar-menu-item">Tentang Kami</a>
+      </div>
+
+      <!-- Menu tambahan untuk admin -->
+      @if(auth.user && auth.user.role === 'admin')
+        <div class="navbar-menu">
+          <a href="{{ route('admin.editArtikel') }}" class="navbar-menu-item">Edit Artikel</a>
+          <a href="{{ route('admin.editProduk') }}" class="navbar-menu-item">Edit Produk</a>
+        </div>
+      @endif
+      
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+ <main class="main-content">
+
+    <article class="artikel">
+      <img src="/image/berita4.png" alt="Gambar Artikel" class="artikel-gambar">
+      <h2 class="artikel-judul">Berbagai Manfaat Melakukan Penjualan Produk Yang sama Melalui Kelompok</h2>
+      <div class="artikel-isi">
+        <p>Komunitas perdagangan merupakan gerbang awal untuk petani, peternak, nelayan, dan pedagang mengembangkan usahanya. Di dalam komunitas perdagangan akan muncul sebuah kolaborasi yang bisa saling menguntungkan keduanya. </p>
+        <p>“Kolaborasi yang lebih banyak dan lebih baik antara petani dan aktor terkait lainnya telah berulang kali diidentifikasi sebagai strategi utama untuk pertanian berkelanjutan.”– Beus and Dunlap 1990; Pretty 1995b; Cobb et al. 1999; Warner 2007; Velten et al. 2015 </p>
+        <p>Bagaimana, apa saat ini kamu sudah masuk komunitas perdagangan? Atau komunitas perdagangan yang kamu ikuti saat ini kurang tepat? Untuk menjawab itu semua, yuk baca artikel sampai selesai ya! Karena kami akan mengulas seluk beluk komunitas perdagangan kolaborasi, manfaat, dan apa hubungannya dengan kesuksesan usaha kamu. </p>
+        <p>Pengertian komunitas menurut KBBI adalah kelompok organisme yang hidup dan saling berinteraksi di dalam daerah tertentu. Komunitas bisa disebut juga paguyuban.  Ya, secara umum kita bisa mengartikan komunitas adalah tempat atau wadah dimana ada sekelompok orang yang memiliki ketertarikan atau tempat yang sama. </p>
+        <p>Sedangkan kolaborasi menurut KBBI adalah kegiatan kerjasama. Atau menurut Margerum (2011), kolaborasi adalah pendekatan untuk memecahkan masalah yang kompleks dimana sekelompok pemangku kepentingan yang otonom (berdiri sendiri) membuat keputusan kolektif dan menerjemahkan keputusan ini menjadi hasil yang nyata. Sedangkan istilah kolaboratif menurut Margerum itu merujuk pada kelompok-kelompok yang melakukan kolaborasi. </p>
+        <p>Jadi, dari masing-masing pengertian di atas bisa disimpulkan bahwa komunitas perdagangan kolaborasi adalah sebuah wadah atau tempat dimana orang-orang memiliki tujuan yang sama yaitu untuk melakukan penjualan atau pembelian dan bekerjasama untuk menciptakan hasil yang nyata dan memperoleh keuntungan di antara kedua belah pihak. </p>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-section footer-logo">
+      <img src="/image/sitani-footer.png" alt="Logo" class="footer-logo-image">
+    </div>
+    <!-- Menu Section -->
+    <div class="footer-section footer-menu">
+      <ul>
+        <li><a href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('artikel') }}">Artikel</a></li>
+        <li><a href="{{ route('layanan') }}">Layanan</a></li>
+        <li><a href="{{ route('tentang-kami') }}">Tentang Kami</a></li>
+      </ul>
+    </div>
+    <!-- Contact Section -->
+    <div class="footer-section footer-contact">
+      <p>Contact Us:</p>
+      <p>Email: info@sitani.com</p>
+      <p>Phone: +62 123 4567</p>
+    </div>
+  </div>
+  <div class="footer-text">
+    &copy; 2024 Your Company. All rights reserved.
+  </div>
+</footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>
